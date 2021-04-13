@@ -1,10 +1,15 @@
 # 语音处理入门
 4月组队
+
+纯小白~参考了很多大佬的配置
+
+
 食物声音识别建模流程
+
 一、环境配置
 
-由于环境配置上碰到了很多坑，配置思路是
-1、先安装anaconda，配置好环境
+配置思路是
+1、首先安装anaconda，配置好环境
 2、根据电脑配置装需要的包
 3、修改Jupyter notebook文件打开及保存路径（默认是在C盘），
     step1:打开Anaconda Prompt,执行：jupyter notebook --generate-config
@@ -22,7 +27,12 @@
 根据训练集中的音频数据所属的类别建立分类模型，并对测试集中的音频数据进行分类预测
 可能采用的分类模型
 
-支持向量机/随机森林/卷积神经网络等（本次采用CNN模型）
+
+采用CNN模型
+
+声音分析的原理：是可以将声音的波普变成图像再进行分析
+
+支持向量机/随机森林/卷积神经网络等
 安装所需要的库
 
     !pip install tensorflow --user
@@ -33,6 +43,4 @@
 加载建模所需的库
 
 import pandas/numpy/sklearn/tensorflow/librosa/glob/librosa.display/tqdm
-建模流程
 
-特征提取——划分数据集（训练集和测试集）——训练模型——模型用于预测——训练模型准确度及模型泛化能力的评估
